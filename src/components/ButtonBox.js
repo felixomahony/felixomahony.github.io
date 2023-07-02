@@ -1,8 +1,9 @@
 import "./ButtonBox.css";
 import { useNavigate } from 'react-router-dom';
+import BetaTag from './BetaTag'
 
 function ButtonBox(props) {
-  const { description, title, link, beta, sameSite } = props;
+  const { description, title, link, beta, sameSite, active } = props;
   const navigate = useNavigate();
 
   const openApp = () => {
@@ -16,10 +17,10 @@ function ButtonBox(props) {
 
 
   return (
-    <div className="ButtonBox" onClick={openApp}>
-      <h3>{title}</h3>
+    <div className={active === false ? "ButtonBoxDeactivated" : "ButtonBox"} onClick={openApp}>
+      <h3>{title + (active===false ? " ⋅ Not available on mobile" : "")}</h3>
       <p>{description}</p>
-      {beta === true ? <p>This is in beta.</p> : null}
+      {beta === true && active !== false ? <BetaTag/> : null}
     </div>
   );
 }

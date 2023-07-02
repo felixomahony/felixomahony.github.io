@@ -6,6 +6,7 @@ import gcnn from './assets/main.pdf';
 
 
 function Home() {
+  console.log(window.innerWidth)
   return (
     <div className="App">
       <header className="App-header">
@@ -42,6 +43,9 @@ function Home() {
           link={"/game"}
           title={"🎮 Min Sweeper"}
           sameSite={true}
+          //only active if not on mobile
+          active={window.innerWidth > 600}
+          beta={true}
         />
         <ButtonBox
           description={

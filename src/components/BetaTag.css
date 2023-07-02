@@ -1,0 +1,16 @@
+.BetaTag{
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    background-color: white;
+    color: orange;
+    border: 0.1rem solid orange;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    z-index: 1;
+}
