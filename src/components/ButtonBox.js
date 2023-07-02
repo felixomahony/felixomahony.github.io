@@ -7,12 +7,14 @@ function ButtonBox(props) {
   const navigate = useNavigate();
 
   const openApp = () => {
+    if (active !== false){
     if (sameSite){
       navigate(link)
     } else{
     console.log("Visiting Link");
     window.open(link, "_blank");
     }
+  }
   };
 
 
