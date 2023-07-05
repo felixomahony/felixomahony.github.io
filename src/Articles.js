@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import ButtonBox from "./components/ButtonBox";
 import { useNavigate } from "react-router-dom";
 //import json file

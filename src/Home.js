@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import felix from "./assets/felix.JPG";
 import "./App.css";
 import ButtonBox from "./components/ButtonBox";
@@ -6,11 +7,32 @@ import gcnn from './assets/main.pdf';
 
 
 function Home() {
-  console.log(window.innerWidth)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const targetObject = React.useRef(null);
+  const [lateralPosition, setLateralPosition] = useState("");
+  const [verticalPosition, setVerticalPosition] = useState("");
+
+  const handleMouseMove = (event) => {
+    const rect = targetObject.current.getBoundingClientRect();
+    const width = rect.right - rect.left;
+    const height = rect.bottom - rect.top;
+    const x = event.clientX;
+    const y = event.clientY;
+    setMousePosition({ x, y });
+    setLateralPosition(
+      x < rect.left ? event.clientX - rect.left : 
+      x > rect.right ? event.clientX - rect.right:
+      0);
+    
+    console.log(lateralPosition);
+  };
+
   return (
-    <div className="App">
+    <div className="App" onMouseMove={handleMouseMove}>
       <header className="App-header">
-        <img src={felix} className="App-logo" alt="Image of Felix O'Mahony" />
+        <div ref={targetObject}>
+        <img  src={felix} className="App-logo" alt="Image of Felix O'Mahony" />
+        </div>
         <h1>Felix O'Mahony</h1>
         <div className="linkcontainer">
           <a
@@ -35,13 +57,20 @@ function Home() {
           >
             Twitter
           </a>
+          <a
+            href="mailto:remove_this_felixomahony@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Email
+          </a>
         </div>
         <ButtonBox
           description={
             "A simple machine learning game. Your goal is to beat a gradient descent algorithm at picking neural network parameters."
           }
           link={"/game"}
-          title={"🎮 Min Sweeper"}
+          title={"🎮 Play Min Sweeper"}
           sameSite={true}
           //only active if not on mobile
           active={window.innerWidth > 600}

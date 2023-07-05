@@ -41,12 +41,6 @@ a{
     text-align: center;
   }
   
-  .App-logo {
-    height: 40vmin;
-    pointer-events: none;
-    margin-top: 1rem;
-  }
-  
   
   .App-header {
     background-color: white;
@@ -65,10 +59,6 @@ a{
     align-items: flex-start;
     justify-content: flex-start;
     width: 900px;
-  }
-  
-  .App-link {
-    color: #61dafb;
   }
   
   
