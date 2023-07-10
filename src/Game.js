@@ -34,7 +34,7 @@ function Articles() {
         <p style={{ "margin-bottom": "1rem", "marginLeft": "0" }}>This is a game I developed to demonstrate the principles of stochastic gradient descent. To play, the user clicks in the left-hand box. This selects the values of two parameters (labelled x and y for ease) in a neural network which would typically be selected through stochastic gradient descent. The player selects these values aiming to classify as many of the points in the right-hand pane correctly as possible. The datapoints' classes are shown through their colours (pink and blue), and the background colour indicates the classification which will be made by the network at the given parameter values.</p>
         <p style={{ "margin-bottom": "1rem", "marginLeft": "0" }}>Once the user has had their turn, the computer then attempts the same task using gradient descent. Whoever classifies more points correctly wins the round and gains more points. The winner is the competitor who correctly classifies the most datapoints throughout the game.</p>
 
-        <div style={{"padding":"1rem", "border":"1px solid #888", "borderRadius": "0.4rem", "box-shadow":"0 0rem 0.4rem rgba(0,0,0,0.15)"}}>
+        <div className="GameContainer">
         <iframe allow="fullscreen" frameborder="0" border="0" src="https://felixomahony.github.io/min-sweeper/index.html" height="512" width="900">game not available</iframe></div>
 
         <h1>What is a Neural Network?</h1>

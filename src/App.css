@@ -1,5 +1,7 @@
 a{
-  color: black;
+  font-family: 'Noto Sans Mono', serif;
+  font-weight: 400;
+  color: #f8f8f2;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
   font-size: 1rem;
@@ -10,14 +12,18 @@ a{
 }
 
 h1{
-  color: black;
-  font-size: 2rem;
+  color: #ff79c6;
+  font-family: 'Noto Sans Mono', serif;
+  font-weight: 600;
+  font-size: 1rem;
   margin-top: 1rem;
   margin-bottom: 0rem;
 }
 
 h3{
-  color: black;
+  font-family: 'Noto Sans Mono', serif;
+  font-weight: 600;
+  color: #ff79c6;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -27,7 +33,9 @@ h3{
 }
 
 p{
-  color: black;
+  font-family: 'Noto Sans Mono', serif;
+  font-weight: 400;
+  color: #f8f8f2;
   margin: 0;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
@@ -49,7 +57,7 @@ p{
 
 
 .App-header {
-  background-color: white;
+  background-color: #282a36;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -57,9 +65,5 @@ p{
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
