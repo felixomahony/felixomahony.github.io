@@ -1,5 +1,10 @@
+.ButtonBoxWrapper{
+    max-width: 32rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 .ButtonBox{
-    max-width: 30rem;
     border-radius: 0.3rem;
     border: 1px solid #44475a;
     background-color: #282a36;

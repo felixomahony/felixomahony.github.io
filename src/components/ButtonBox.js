@@ -19,10 +19,12 @@ function ButtonBox(props) {
 
 
   return (
+    <div className="ButtonBoxWrapper">
     <div className={active === false ? "ButtonBoxDeactivated" : "ButtonBox"} onClick={openApp}>
       <h3>{title + (active===false ? " ⋅ Not available on mobile" : "")}</h3>
       <p>{description}</p>
       {beta === true && active !== false ? <BetaTag/> : null}
+    </div>
     </div>
   );
 }
