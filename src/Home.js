@@ -3,7 +3,6 @@ import felix from "./assets/felix.JPG";
 import "./App.css";
 import ButtonBox from "./components/ButtonBox";
 import cv from './assets/Felix O CV.pdf';
-import gcnn from './assets/main.pdf';
 
 
 function Home() {
@@ -82,13 +81,6 @@ function Home() {
           }
           link={"https://github.com/felixomahony/nerf-pytorch"}
           title={"🎨 Neural Radiance Field Style Transfer"}
-        />
-        <ButtonBox
-          description={
-            "A project which uses group theory to perform colour-invariant image classification."
-          }
-          link={gcnn}
-          title={"🌈 Colour Invariant Image Classification"}
         />
         <ButtonBox
           description={
