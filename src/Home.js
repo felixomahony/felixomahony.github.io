@@ -77,21 +77,29 @@ function Home() {
         />
         <ButtonBox
           description={
-            "A project to adapt the Neural Radiance Field method of 3D reconstruction for style transfer."
+            "In this paper, we introduce convolutional neural networks equivariant to variations in hue and saturation by design."
           }
-          link={"https://github.com/felixomahony/nerf-pytorch"}
-          title={"🎨 Neural Radiance Field Style Transfer"}
+          link={"https://arxiv.org/abs/2406.09588"}
+          title={"🎨 Color Equivariant Network (CVPR '24 Equivision Workshop)"}
+          new={true}
         />
         <ButtonBox
           description={
-            "Read Felix's CV, which includes his education, work experience, and skills."
+            "A project to adapt the Neural Radiance Field method of 3D reconstruction for style transfer."
+          }
+          link={"https://github.com/felixomahony/nerf-pytorch"}
+          title={"💅 Neural Radiance Field Style Transfer"}
+        />
+        <ButtonBox
+          description={
+            "CV detailing my education and work experience."
           }
           link={cv}
           title={"📄 Curriculum Vitae"}
         />
         <ButtonBox
           description={
-            "Articles Felix has written for various national and student publications."
+            "Articles written for various national and student publications."
           }
           link={"/articles"}
           title={"📰 Writing"}
