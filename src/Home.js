@@ -81,7 +81,7 @@ function Home() {
           }
           link={"https://arxiv.org/abs/2406.09588"}
           title={"🎨 Color Equivariant Network (CVPR '24 Equivision Workshop)"}
-          new={true}
+          recent={true}
         />
         <ButtonBox
           description={
@@ -92,7 +92,7 @@ function Home() {
         />
         <ButtonBox
           description={
-            "CV detailing my education and work experience."
+            "CV detailing my education and work experience. Last updated 2024, June. Contact for an up-to-date version."
           }
           link={cv}
           title={"📄 Curriculum Vitae"}
