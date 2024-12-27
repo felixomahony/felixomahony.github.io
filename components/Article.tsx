@@ -21,7 +21,7 @@ export default function Article({ children, title, date, link }: ArticleProps) {
         target="_blank"
         className="flex items-center text-blue-600 hover:underline font-semibold mb-4"
       >
-        ➔ See More
+        ➔ More
       </a>
     </div>
   );

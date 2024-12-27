@@ -2,33 +2,32 @@ import Card from "./Card";
 import Article from "./Article";
 import { useState, useEffect } from "react";
 // get articles.json
+import articlesData from "../public/articles.json";
 
-export default function ResearchWork({
+export default function WritingWork({
   setShowOverlay,
 }: {
   setShowOverlay: (showOverlay: boolean) => void;
 }) {
-  const [data, setData] = useState<any[]>([]);
+  const articles = Array.isArray(articlesData.articles)
+    ? articlesData.articles
+    : [];
 
-  useEffect(() => {
-    fetch("/articles.json")
-      .then((response) => response.json())
-      .then((jsonData) => setData(jsonData))
-      .catch((error) => console.error("Error fetching JSON:", error));
-  }, []);
+  console.log(articlesData);
 
   return (
     <Card title={"Writing"} setShowOverlay={setShowOverlay}>
       <div className="mt-2" />
-      {data.length > 0 ? (
-        data.map((article: any) => (
-          <Article title={article.title} date={""} link={article.link}>
-            {article.description}
-          </Article>
-        ))
-      ) : (
-        <p>No articles found.</p>
-      )}
+      {articles.map((article: any) => (
+        <Article
+          key={article.link}
+          title={article.title}
+          date={""}
+          link={article.link}
+        >
+          {article.description}
+        </Article>
+      ))}
     </Card>
   );
 }
