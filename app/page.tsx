@@ -10,7 +10,7 @@ import WritingWork from "@/components/WritingWork";
 
 export default function Home() {
   const [showResearch, setShowResearch] = useState(false);
-  const [showDemos, setShowDemos] = useState(true);
+  const [showDemos, setShowDemos] = useState(false);
   const [showWriting, setShowWriting] = useState(false);
 
   return (

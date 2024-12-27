@@ -11,9 +11,7 @@ export default function ResearchWork({
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch(
-      "https://github.com/felixomahony/felixomahony.github.io/blob/main/public/articles.json"
-    )
+    fetch("/articles.json")
       .then((response) => response.json())
       .then((jsonData) => setData(jsonData))
       .catch((error) => console.error("Error fetching JSON:", error));
