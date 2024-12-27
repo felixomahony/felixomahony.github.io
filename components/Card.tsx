@@ -1,51 +1,46 @@
 import { Yeseva_One, Calistoga } from "next/font/google";
 
-const yeseva_one = Yeseva_One({
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
 const calistoga = Calistoga({
   subsets: ["latin"],
   weight: ["400"],
 });
 
-export default function Card() {
+export default function Card({
+  setShowOverlay,
+  title,
+  children,
+}: {
+  setShowOverlay: (showOverlay: boolean) => void;
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
-    <div className="p-16 flex flex-col h-full border-r justify-center items-center">
-      <img src="/profile.JPG" alt="profile" className="w-32 h-32 mb-4" />
-      <h1
-        className={`text-5xl font-bold mb-4 text-teal-950 ${calistoga.className} text-center`}
+    <>
+      <div
+        className="absolute inset-0 bg-slate-500 bg-opacity-50 z-10 flex justify-center overflow-scroll"
+        onClick={() => setShowOverlay(false)}
       >
-        Felix O'Mahony
-      </h1>
-      <p className="text-black text-center">
-        PhD candidate at the University of Cambridge supervised by Roberto
-        Cipolla. Interested in using world models to generate synthetic training
-        data for robots. I also like making games and demos (see overleaf), and
-        writing. I am still in the process of updating this website, so please
-        check back soon for more content.
-      </p>
-      {/* <div className="mt-4">
-        <a
-          href="#"
-          className="flex items-center text-blue-600 hover:underline font-semibold"
+        <div
+          className="max-w-xl w-full bg-slate-50 opacity-100 z-20 p-4 mt-0 rounded-none shadow-lg h-fit md:mt-4 md:rounded-lg lg:rounded-lg lg:mt-4"
+          onClick={(e) => e.stopPropagation()}
         >
-          ➔ Recent Projects and Work
-        </a>
-        <a
-          href="#"
-          className="flex items-center text-blue-600 hover:underline font-semibold"
-        >
-          ➔ Games and Demos
-        </a>
-        <a
-          href="#"
-          className="flex items-center text-blue-600 hover:underline font-semibold"
-        >
-          ➔ More About Felix
-        </a>
-      </div> */}
-    </div>
+          <div className="flex justify-between items-center">
+            <h1
+              className={`text-2xl font-bold text-teal-950 ${calistoga.className}`}
+            >
+              {title}
+            </h1>
+            <a
+              href="#"
+              className="text-2xl text-slate-800"
+              onClick={() => setShowOverlay(false)}
+            >
+              ╳
+            </a>
+          </div>
+          {children}
+        </div>
+      </div>
+    </>
   );
 }

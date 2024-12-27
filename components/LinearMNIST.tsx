@@ -77,7 +77,7 @@ export default function LinearMNIST() {
   }, []);
 
   return (
-    <div className="p-16 flex flex-col h-full">
+    <div className="p-8 flex flex-col h-full overflow-scroll border-l">
       <h1
         className={`text-2xl font-bold mb-4 text-teal-950 ${calistoga.className}`}
       >
@@ -86,9 +86,9 @@ export default function LinearMNIST() {
       <p className="text-black">
         Click to draw the outer region of a digit in the{" "}
         <span className="bg-teal-100">green squares</span>. The{" "}
-        <span className="bg-blue-100">blue squares</span> show a least squares
-        approximation of the inner region of the digit, fit on the MNIST
-        Dataset.
+        <span className="bg-blue-100">blue squares</span> in the inner 16
+        squares show a linear approximation of the inner region of the digit.
+        The linear function weights are fit on the MNIST dataset.
       </p>
       {/* A grid of 12 x 12 squares each one is a component of class Square */}
       <div className="grid grid-cols-12 w-96 h-96 mt-4 mb-4">
@@ -105,13 +105,13 @@ export default function LinearMNIST() {
         )}
       </div>
       <button
-        className="flex items-center text-teal-950 underline"
+        className="flex items-center text-slate-800 underline"
         onClick={newExample}
       >
         New Random Example
       </button>
       <button
-        className="flex items-center text-teal-950 underline"
+        className="flex items-center text-slate-800 underline"
         onClick={clearSquares}
       >
         Clear Squares
