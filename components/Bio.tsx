@@ -60,6 +60,12 @@ export default function Bio({
         >
           Google Scholar
         </a>
+        <a
+          href="https://github.com/felixomahony"
+          className="flex items-center text-slate-700 underline mb-2 mr-2 ml-2"
+        >
+          GitHub
+        </a>
       </div>
       <p className="text-black text-center">
         PhD candidate at the University of Cambridge supervised by Roberto
@@ -86,7 +92,7 @@ export default function Bio({
           onClick={handleWritingClick}
           className="flex items-center text-blue-600 hover:underline font-semibold"
         >
-          ➔ Writing
+          ➔ Data Journalism & Writing
         </a>
       </div>
     </div>

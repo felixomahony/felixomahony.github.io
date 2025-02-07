@@ -13,8 +13,6 @@ export default function WritingWork({
     ? articlesData.articles
     : [];
 
-  console.log(articlesData);
-
   return (
     <Card title={"Writing"} setShowOverlay={setShowOverlay}>
       <div className="mt-2" />
@@ -24,6 +22,7 @@ export default function WritingWork({
           title={article.title}
           date={""}
           link={article.link}
+          venue={article.venue}
         >
           {article.description}
         </Article>

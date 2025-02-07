@@ -6,16 +6,24 @@ interface ArticleProps {
   title: string;
   date: string;
   link: string;
+  venue?: string;
 }
 
-export default function Article({ children, title, date, link }: ArticleProps) {
+export default function Article({
+  children,
+  title,
+  date,
+  link,
+  venue,
+}: ArticleProps) {
   return (
     <div className="flex flex-col h-full border-t ">
       <div className="flex flex-row justify-between items-center">
         <h1 className={`font-bold mt-2 text-teal-950`}>{title}</h1>
         <h1 className={`italic mt-2 text-teal-950`}>{date}</h1>
       </div>
-      <p className="text-black mb-1 mt-2">{children}</p>
+      <h1 className={`italic text-teal-950`}>{venue}</h1>
+      <p className="text-black mb-1">{children}</p>
       <a
         href={link}
         target="_blank"
