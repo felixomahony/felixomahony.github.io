@@ -68,9 +68,9 @@ export default function Bio({
         </a>
       </div>
       <p className="text-black text-center">
-        PhD candidate at the University of Cambridge supervised by Roberto
-        Cipolla. Interested in using world models to generate synthetic training
-        data for robots.
+        PhD candidate at the University of Cambridge co-supervised by Roberto
+        Cipolla and Ayush Tewari. Interested in using world models to generate
+        synthetic training data for robots.
       </p>
       <div className="mt-4">
         <a
