@@ -163,9 +163,15 @@ a { color: var(--accent); }
   line-height: 1.5;
 }
 
-/* Full-width strip flush with the bottom of the page. */
+/* Full-width strip flush with the bottom of the page. Only shown on devices
+   with a hovering, precise pointer (a mouse or trackpad), not touch screens. */
 .playground {
+  display: none;
   margin-top: 1rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .playground { display: block; }
 }
 
 #dominoes {
