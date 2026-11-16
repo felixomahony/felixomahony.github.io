@@ -162,3 +162,14 @@ a { color: var(--accent); }
   margin: 0.4rem 0 0;
   line-height: 1.5;
 }
+
+/* Full-width strip flush with the bottom of the page. */
+.playground {
+  margin-top: 1rem;
+}
+
+#dominoes {
+  display: block;
+  width: 100%;
+  height: 220px;
+}

@@ -75,6 +75,10 @@
       </ul>
     </section>
   </main>
+
+  <footer class="playground">
+    <canvas id="dominoes" aria-hidden="true"></canvas>
+  </footer>
   <script>
     // Assemble the address at runtime so it never appears in the HTML source.
     (function () {
@@ -83,5 +87,7 @@
       a.href = "mailto:" + rev(a.dataset.u) + "@" + rev(a.dataset.d);
     })();
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/planck@1.0.6/dist/planck.min.js"></script>
+  <script src="dominoes.js"></script>
 </body>
 </html>
